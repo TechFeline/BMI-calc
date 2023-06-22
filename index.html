@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <div class="form-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" step="0.01" placeholder="Enter weight">
+    </div>
+    <div class="form-group">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" step="0.01" placeholder="Enter height">
+    </div>
+    <button onclick="calculateBMI()">Calculate</button>
+    <div id="result" class="result-container"></div>
+    <div id="visualization" class="visualization-container"></div>
+    <div id="recommendations" class="recommendations-container"></div>
+  </div>
+
+  <div class="knowledge">
+    <h2>General Knowledge</h2>
+    <h3>Weight to Height Ratio Chart (Adults)</h3>
+    <table>
+      <tr>
+        <th>Height</th>
+        <th>Female Weight (kg)</th>
+        <th>Male Weight (kg)</th>
+      </tr>
+      <!-- Add table rows dynamically using JavaScript -->
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Get the table element
+    var table = document.querySelector('.knowledge table');
+
+    // Loop through the data and add table rows dynamically
+    knowledgeData.forEach(function(data) {
+      if (data.ageGroup === "Adults") {
+        data.chart.forEach(function(row) {
+          var newRow = document.createElement('tr');
+          newRow.innerHTML = `<td>${row.height}</td><td>${row.femaleWeight}</td><td>${row.maleWeight}</td>`;
+          table.appendChild(newRow);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
