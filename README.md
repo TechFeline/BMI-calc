@@ -25,10 +25,6 @@ Check out the live project [here](https://techfeline.github.io/BMI-calc).
 - CSS
 - JavaScript
 
-## Preview
-
-![BMI Calculator Preview](preview.png)
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
