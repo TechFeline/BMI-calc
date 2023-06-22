@@ -8,14 +8,24 @@
   <div class="container">
     <h1>BMI Calculator</h1>
     <div class="form-group">
-      <label for="weight">Weight (kg):</label>
+      <label for="weight">Weight:</label>
       <input type="number" id="weight" step="0.01" placeholder="Enter weight">
+      <select id="weightUnit">
+        <option value="kg">kg</option>
+        <option value="lb">lb</option>
+      </select>
     </div>
     <div class="form-group">
-      <label for="height">Height (cm):</label>
+      <label for="height">Height:</label>
       <input type="number" id="height" step="0.01" placeholder="Enter height">
+      <select id="heightUnit">
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+        <option value="ft">ft</option>
+        <option value="in">in</option>
+      </select>
     </div>
-    <button onclick="calculateBMI()">Calculate</button>
+    <button id="calculateBtn">Calculate</button>
     <div id="result" class="result-container"></div>
     <div id="visualization" class="visualization-container"></div>
     <div id="recommendations" class="recommendations-container"></div>
